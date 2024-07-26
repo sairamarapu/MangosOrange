@@ -1,0 +1,16 @@
+.a{
+    display: flex;
+    justify-content: space-evenly;
+}
+.c{
+    padding: 20px;
+}
+.heading{
+    font-size: 30px;
+    text-align: center;
+}
+
+.hi{
+    color: black;
+    padding: 20px;
+}
