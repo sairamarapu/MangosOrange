@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+    </style>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <main class="container mx-auto py-8">
+        <h1 class="text-4xl font-bold mb-4">About Us</h1>
+        <p>Company history and additional content goes here.</p>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        function loadHTML(file, targetId) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(targetId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+
+        // Adjust path based on your directory structure
+        loadHTML("importation/navbar.html", 'navbar');
+        loadHTML('importation/footer.html', 'footer');
+    </script>
+</body>
+
+</html>
