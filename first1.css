@@ -136,7 +136,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     padding: 3rem 2rem; /* Reduced padding */
-    background-color: #111;
+    background-color: #1F2937;
 }
 
 .services .service-box {
@@ -159,26 +159,18 @@ header {
 }
 
 .presence {
-    padding: 3rem 2rem; /* Reduced padding */
+    padding: 3rem 2rem;
+    display: flex; /* Reduced padding */
     text-align: center;
-    background-color: #000;
+    background-color:#1F2937;
 }
-
-.presence h2 {
-    margin-bottom: 2rem;
-}
-
 .presence .presence-box {
-    display: flex;
-    justify-content: center;
-}
-
-.presence .presence-box > div {
-    flex: 1 1 calc(25% - 2rem);
+    flex: 1 1 calc(33.333% - 2rem);
     margin: 1rem;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #222;
     border-radius: 10px;
+    text-align: center;
     transition: background-color 0.3s, transform 0.3s; /* Added transition */
 }
 
@@ -191,15 +183,16 @@ header {
     transform: scale(1.05); /* Added scale effect */
 }
 
+
+
+
 .clients {
     padding: 3rem 2rem; /* Reduced padding */
     text-align: center;
-    background-color: #111;
+    background-color: #1F2937;
 }
 
-.clients h2 {
-    margin-bottom: 2rem;
-}
+
 
 .clients .client-logos {
     display: flex;
