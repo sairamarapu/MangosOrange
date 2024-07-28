@@ -52,28 +52,7 @@
 </head>
 
 <body>
-  <nav class="bg-black py-4 px-6 shadow-md">
-    <div class="container mx-auto flex items-center justify-between">
-      <a href="#" class="flex items-center">
-        <img src="https://placehold.co/60x60.svg" alt="Mangos Orange Logo" class="h-8 mr-3">
-        <span class="font-bold text-xl text-E68369" style="color: orange;">Mangos Orange</span>
-      </a>
-      <ul class="hidden md:flex space-x-6">
-        <li class="hover:text-E68369"><a href="index.html">Home</a></li>
-        <li class="hover:text-E68369"><a href="#">Wista</a></li>
-        <li class="hover:text-E68369"><a href="#">About</a></li>
-        <li class="hover:text-E68369"><a href="#">Our Services</a></li>
-        <li class="hover:text-E68369"><a href="#">Gallery</a></li>
-        <li class="hover:text-E68369"><a href="career.html">Career</a></li>
-        <li class="hover:text-E68369"><a href="contact.html">Contact Us</a></li>
-      </ul>
-      <button class="md:hidden focus:outline-none">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-  </nav>
+  <div id="navbar"></div>
     <div class="container mx-auto px-4 py-8">
   <div class="flex flex-col items-center justify-center">
     <h1 class="text-4xl font-bold mb-4" style="color: #ffffff;">Contact Us</h1>
@@ -135,55 +114,25 @@
     </div>
   </div>
 </div>
-<footer class="bg-gray-900 text-gray-400 py-10">
-  <div class="container mx-auto px-4">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="mb-6 md:mb-0">
-              <h5 class="text-white font-bold text-xl mb-4">USEFUL LINKS</h5>
-              <ul class="space-y-2">
-                  <li><a href="#" class="hover:text-E68369">Home</a></li>
-                  <li><a href="#" class="hover:text-E68369">About us</a></li>
-                  <li><a href="#" class="hover:text-E68369">Services</a></li>
-                  <li><a href="#" class="hover:text-E68369">Gallery</a></li>
-                  <li><a href="#" class="hover:text-E68369">Career</a></li>
-                  <li><a href="#" class="hover:text-E68369">Contact</a></li>
-              </ul>
-          </div>
-          <div class="mb-6 md:mb-0">
-              <h5 class="text-white font-bold text-xl mb-4">OUR SERVICES</h5>
-              <ul class="space-y-2">
-                  <li><a href="#" class="hover:text-E68369">Staffing Solutions</a></li>
-                  <li><a href="#" class="hover:text-E68369">Skill Development Projects</a></li>
-                  <li><a href="#" class="hover:text-E68369">Payroll Outsourcing</a></li>
-                  <li><a href="#" class="hover:text-E68369">Contract Labour Sourcing</a></li>
-                  <li><a href="#" class="hover:text-E68369">Integrated Facility Management</a></li>
-                  <li><a href="#" class="hover:text-E68369">Agritech & Allied Domain</a></li>
-                  <li><a href="#" class="hover:text-E68369">Catering & Kitchen Services</a></li>
-              </ul>
-          </div>
-          <div class="mb-6 md:mb-0">
-              <h5 class="text-white font-bold text-xl mb-4">CONTACT US</h5>
-              <p class="text-gray-400 mb-2">Corp. Office:</p>
-              <p class="text-gray-400 mb-2">H-87, 3rd Floor, Sector-63, Noida</p>
-              <p class="text-gray-400 mb-2">U.P. - 201301</p>
-              <p class="text-gray-400 mb-2">Phone: +91 120 416 4821</p>
-              <p class="text-gray-400 mb-2">Email: info@mangosorange.co.in</p>
-          </div>
-          <div class="mb-6 md:mb-0">
-              <h5 class="text-white font-bold text-xl mb-4">Our Presence</h5>
-              <ul class="space-y-2">
-                  <li><a href="#" class="hover:text-E68369">Delhi</a></li>
-                  <li><a href="#" class="hover:text-E68369">Haryana</a></li>
-                  <li><a href="#" class="hover:text-E68369">Rajasthan</a></li>
-                  <li><a href="#" class="hover:text-E68369">Uttar Pradesh</a></li>
-                  <li><a href="#" class="hover:text-E68369">Uttarakhand</a></li>
-                  <li><a href="#" class="hover:text-E68369">Gujrat</a></li>
-                  <li><a href="#" class="hover:text-E68369">Tamil Nadu</a></li>
-              </ul>
-          </div>
-      </div>
-  </div>
-</footer>
+<div id="footer"></div>
+
+    <script>
+        function loadHTML(file, targetId) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(targetId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+        loadHTML("navbar.html", 'navbar');
+        loadHTML('footer.html', 'footer');
+    </script>
 </body>
  
  
