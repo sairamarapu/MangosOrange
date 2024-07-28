@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Integrated Skill Training & Apprenticeship</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+        .image-section img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        h1, h2, h3 {
+            color: #FFA500; /* Orange color */
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <div id="navbar"></div>
+    <div class="max-w-7xl mx-auto p-6">
+        <div class="bg-gray-800 p-6 rounded-lg">
+            <h1 class="text-3xl font-bold text-orange-500 mb-4">Work Integrated Skill Training & Apprenticeship</h1>
+            <h2 class="text-2xl font-bold text-orange-500 mb-2">Objective of the WISTA</h2>
+            <p class="mb-4">We are engaged in offering customized solutions for all types of manpower services. We offer a wide range of qualified human resources across the industries. The company has distinguished itself as a quality manpower solution provider at cost-effective prices through a well-managed management set up.</p>
+            <p class="mb-4">We help to hire contractual as well as permanent employees for your organization. Whether you need to urgently fill a position or need members for an entire team, we are ready to help. Our experts have recruited candidates for all levels ranging from entry-level positions to high-level managerial posts. We also offer customized services according to a client’s requirement.</p>
+            <p class="mb-4">From temporary and contract placement solutions, training, and engagement programs, to customized retail services, we offer a suite of staffing services that help you manage and grow your business efficiently.</p>
+            <ul class="list-disc list-inside mb-6">
+                <li class="mb-2">To implement work integrated ITIs via the Flexi MoU signed DGT for NCVT certifications like Assembly Line Fitter, Production Technician, Industrial Electrician etc.</li>
+                <li class="mb-2">Providing apprentices, trainees & workforce solutions to the industry in semi-skilled & skilled worker categories.</li>
+                <li class="mb-2">Creating a flexible, modular framework enabling youth to obtain industry relevant qualifications while interning or working with the industry.</li>
+                <li class="mb-2">Industry Integration for imparting market relevant skills and enabling pathways between vocational education system & higher education.</li>
+            </ul>
+            <h3 class="text-xl font-bold text-orange-500 mb-2">Flexible, modular framework to enable youth to obtain industry relevant qualifications</h3>
+            <ul class="list-disc list-inside mb-6">
+                <li class="mb-2">To provide the students with a flexible, modular system for pursuing their higher education from 10th Pass to ITI/Diploma/Degree Level while they work.</li>
+                <li class="mb-2">To recognize prior learning & on the job learning and translated into credits which can be accumulated and will form a part of the earned qualification</li>
+            </ul>
+            <h3 class="text-xl font-bold text-orange-500 mb-2">Industry Integration for imparting market relevant skills</h3>
+            <ul class="list-disc list-inside mb-6">
+                <li class="mb-2">To develop an understanding of the manufacturing sector’s processes and systems and improve productivity & efficiency.</li>
+                <li class="mb-2">To enhance the learner’s intellectual and transferable skills, especially focusing on manufacturing sector specific knowledge and practices.</li>
+                <li class="mb-2">To provide opportunities to apply the skills gained through industry integrated / live projects.</li>
+                <li class="mb-2">To augment the ability to plan, execute manufacturing and production functions efficiently.</li>
+            </ul>
+            <h3 class="text-xl font-bold text-orange-500 mb-2">Types of programs and regulatory compliance</h3>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0 md:space-x-6">
+                <div class="bg-gray-800 p-6 rounded-lg flex-1">
+                    <p class="mb-4">Regulatory Framework: Directorate General of Training (DGT, the apex body for governance of ITIs & NCVT), Ministry of Skill Development & Entrepreneurship, Govt. of India given approval to Centurion – Gram Tarang to operationalize these programs through following MoUs</p>
+                    <ul class="list-disc list-inside mb-6">
+                        <li class="mb-2">‘Flexi MoU’ with Centurion-Gram Tarang which gives permission to partner with industries to run regular NCVT ITI courses (Fitter, Electrician, Welder & Turner) in a flexible delivery mode while work with the industry.</li>
+                        <li class="mb-2">‘Apprenticeship Agreement’ whereby Centurion-Gram Tarang has been given approval to enroll 1,00,000 apprentices into work integrated certification programs over the next 10 years</li>
+                    </ul>
+                </div>
+                <div class="image-section flex-1 flex justify-center items-center">
+                    <img src="images/image.png" alt="Work Integrated Certification Programs" class="rounded-lg max-w-full h-auto transform transition-transform duration-300 hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+
+    <script>
+        function loadHTML(file, targetId) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(targetId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+        loadHTML("navbar.html", 'navbar');
+        loadHTML('footer.html', 'footer');
+    </script>
+</body>
+</html>
