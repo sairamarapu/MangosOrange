@@ -31,10 +31,15 @@
     color: #FFA500;
   }
   #scan{
-    height: 550px;
-    object-position: 0;
-    object-fit: fill;
+    height: 500px;
+    object-fit: scale-down;
+    aspect-ratio: 10/2;
   }
+  #pscan{
+    
+    object-fit: scale-down;
+  }
+
   
 </style>
 </head>
@@ -75,9 +80,9 @@
     </div>
     <div class="bg-ECCEAE p-4 rounded-lg shadow-md">
       <div class="flex items-center mb-4">
-        <img src="MOLogo.png" alt="Profile Icon" class="w-12 h-12 rounded-full mr-4">
+        <img src="MOLogo.png" alt="Profile Icon" class="w-12 h-12 rounded-full mr-4" id="pscan">
         <h2 class="text-xl font-bold">MangosOrange Hiring</h2>
-        <p class="text-white-700">WhatsApp group</p>
+        <!-- <p class="text-white">WhatsApp group</p> -->
       </div>
       <img src="https://mangosorange.co.in/assets/img/whatsApp-group.jpeg" alt="QR Code" class="w-full h-auto" id="scan">
       <p class="text-center mt-4">Scan this QR code using the WhatsApp camera to join this group</p>
