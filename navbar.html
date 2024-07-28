@@ -16,6 +16,64 @@
   li:hover{
     color: orange;
   }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px; /* Reduced height */
+    margin-right: 20px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    position: relative;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Reduced padding */
+    display: block;
+    transition: background-color 0.3s, color 0.3s; /* Added transition */
+}
+
+.navbar nav ul li a:hover {
+    background-color: #ff6600;
+    color: #000;
+}
+
+.navbar nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 100%;
+    left: 0;
+}
+
+.navbar nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+.navbar nav ul li ul.dropdown li {
+    width: 200px;
+}
 </style>
 </head>
 
