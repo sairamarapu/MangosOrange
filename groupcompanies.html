@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+    </style>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="first1.css">
+</head>
+<style>
+    main{
+        background-color: #1F2937;
+        margin: 2rem;
+        padding: 2rem;
+    }
+    p{
+        font-size: 1.3rem;
+    }
+    .company {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 2rem; /* Reduced padding */
+    background-color: #1F2937;
+    }
+
+    .company .companies {
+        flex: 1 1 calc(33.333% - 2rem);
+        margin: 1rem;
+        padding: 1rem;
+        background-color: #222;
+        border-radius: 10px;
+        text-align: center;
+        transition: background-color 0.3s, transform 0.3s; /* Added transition */
+    }
+
+    .company .companies h2 {
+        color: #ff6600;
+    }
+
+    .company .companies:hover {
+        background-color: #333;
+        transform: scale(1.05); /* Added scale effect */
+    }
+
+
+</style>
+<body>
+    <div id="navbar"></div>
+    <h1 style="text-align: center; margin: 0.8rem;font-size: large; background-color: orange;">About Companies</h1>
+    <main class="company">
+        
+        <div class="companies">
+            <h2>MangosOrange Services Pvt. Ltd.</h2>
+            <p>MangosOrange Services Private Limited is Parent company of MangosOrange Group. It deals in Staffing Solutions, Payroll Outsourcing, Contract Manpower Sourcing, Integrated Facility Management Services. This company is serving to more than 100 clients & more than 12 states in India.</p>
+        </div>
+        <div class="companies">
+            <h2>MangosOrange Trainning & Technical Services Pvt. Ltd.</h2>
+            <p>MangosOrange Trainning & Technical Services Private Limited deals with various Work Integrated Skill training & Apprenticeship programs. MTTSPL also deals with various skill development programs including National Apprenticeship Promotion Scheme (NAPS), National Apprenticeship Training Scheme (NATS) & Other Skill Development Programs sponsored by Various Ministries / Departments.</p>
+        </div>
+        <div class="companies">
+            <h2>MangosOrange Agritech India Pvt. Ltd.</h2>
+            <p>MangosOrange Agritech India Private Limited is engaged in Research & Development, Skill Development Initiatives in Agritech & Allied Domains. The Comapny is engaged in research & development in Hydroponics, Aeroponics and latest polyhouse technologies.</p>
+        </div>
+        <div class="companies">
+            <h2>Shring Training & Development Foundation</h2>
+            <p>Shring Training & Development Foundation is "Not-For-Profit" arm of MangosOrange Group registered as Section 8 of Companies Act 2013. This vertical is working for the upliftment of Economical Weaker Sections of the Society by helping them in Higher Education and Promoting Wage Employemnt as well as Self-Employment.</p>
+        </div>
+        <div class="companies">
+            <h2>Shokuji Foods Private Limited</h2>
+            <p>Shokuji Foods Private Limited is engaged in offering customized catering solutions for different locations PAN India. The company has distinguished itself as a quality Catering solution provider at cost-effective prices through a well-managed management set up.</p>
+        </div>
+        <div class="companies">
+            <h2>Shokuji Foods Private Limited</h2>
+            <p>Shokuji Foods Private Limited is engaged in offering customized catering solutions for different locations PAN India. The company has distinguished itself as a quality Catering solution provider at cost-effective prices through a well-managed management set up.</p>
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script>
+        function loadHTML(file, targetId) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(targetId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+        loadHTML("navbar.html", 'navbar');
+        loadHTML('footer.html', 'footer');
+    </script>
+</body>
+</html>
