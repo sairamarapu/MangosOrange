@@ -5,12 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* General Reset */
+        body, h4, p {
+          margin: 0;
+          padding: 0;
+        }
+    
+        /* Container Styles */
+        .container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+        }
+    
+        /* Row Styles */
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          margin: -15px;
+        }
+    
+        /* Column Styles */
+        .col-lg-4, .col-md-6 {
+          position: relative;
+          width: 100%;
+          padding: 15px;
+        }
+    
+        @media (min-width: 992px) {
+          .col-lg-4 {
+            width: 33.3333%;
+          }
+        }
+    
+        @media (min-width: 768px) and (max-width: 991px) {
+          .col-md-6 {
+            width: 50%;
+          }
+        }
+    
+        @media (max-width: 767px) {
+          .col-md-6 {
+            width: 100%;
+          }
+        }
+    
+        /* Services Section Styles */
+        .services .icon-box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          border: 1px solid #ededed;
+          padding: 20px;
+          transition: all ease-in-out 0.3s;
+          background: #fff;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          box-sizing: border-box;
+          min-height: 250px;
+        }
+    
+        .services .icon-box .icon {
+          margin: 0 auto;
+          width: 64px;
+          height: 64px;
+          background: #e96b56;
+          border-radius: 5px;
+          transition: all .3s ease-out 0s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          position: relative;
+        }
+    
+        .services .icon-box .icon i {
+          color: #fff;
+          font-size: 28px;
+        }
+    
+        .services .icon-box .icon::before {
+          position: absolute;
+          content: '';
+          left: -8px;
+          top: -8px;
+          height: 100%;
+          width: 100%;
+          background: #fbe2dd;
+          border-radius: 5px;
+          transition: all .3s ease-out 0s;
+          transform: translateZ(-1px);
+        }
+    
+        .services .icon-box h4 {
+          font-weight: 700;
+          margin-bottom: 15px;
+          font-size: 24px;
+        }
+    
+        .services .icon-box h4 a {
+          color: #545454;
+          text-decoration: none;
+        }
+    
+        .services .icon-box p {
+          line-height: 24px;
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+    
+        .services .icon-box:hover {
+          background: #e96b56;
+          border-color: #e96b56;
+        }
+    
+        .services .icon-box:hover .icon {
+          background: #fff;
+        }
+    
+        .services .icon-box:hover .icon i {
+          color: #e96b56;
+        }
+    
+        .services .icon-box:hover .icon::before {
+          background: #ef9383;
+        }
+    
+        .services .icon-box:hover h4 a,
+        .services .icon-box:hover p {
+          color: #fff;
+        }
+      </style>
 </head>
 <body>
     <div id="navbar"></div>
 
     <br>
-    <br>
+    <section id="services" class="services">
+        <div class="container">
+    
+          <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="icon-box">
+                <div class="icon"><i class="icofont-architecture"></i></div>
+                <h4><a href="#">Staffing Solutions</a></h4>
+                <p>Staffing Solutions for all major industries like Automobile, Electrical, Electronics, Pharmaceutical, Food, Plastic, Educational.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="icon-box">
+                <div class="icon"><i class="icofont-engineer"></i></div>
+                <h4><a href="#">WISTA</a></h4>
+                <p>Flexible, Modular framework to enable youth to obtain industry relevant qualifications &amp; On-The-Job Training's</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="icon-box">
+                <div class="icon"><i class="icofont-workers-group"></i></div>
+                <h4><a href="#">Contract Labour</a></h4>
+                <p>We provide solutions to organizations right from junior level to senior level positions with 100% Legal compliances.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+              <div class="icon-box">
+                <div class="icon"><i class="icofont-people"></i></div>
+                <h4><a href="#">Payroll Outsourcing</a></h4>
+                <p>Fully Automated Process to handle your payroll outsourcing process so that possibilities of human errors eradicated.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box">
+                <div class="icon"><i class="icofont-brainstorming"></i></div>
+                <h4><a href="#">Skill Development</a></h4>
+                <p>We are End to End Solutions Providers for Skill Development Projects sponsored by different agencies &amp; Ministries.</p>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box">
+                <div class="icon"><i class="icofont-labour"></i></div>
+                <h4><a href="#">Facility Management</a></h4>
+                <p>IFM can increase operational efficiencies &amp; drive savings across a business to better meet organizational goals.</p>
+              </div>
+            </div>
+    
+          </div>
+    
+        </div>
+      </section>
+      <br>
 
     <div id="footer"></div>
 
