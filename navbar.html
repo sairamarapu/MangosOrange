@@ -10,85 +10,8 @@
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
-  li{
-    color:white
-  }
-  li:hover{
-    color: orange;
-  }
+   
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.navbar .logo {
-    display: flex;
-    align-items: center;
-}
-
-.navbar .logo img {
-    height: 40px; /* Reduced height */
-    margin-right: 20px;
-}
-
-.navbar nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar nav ul li {
-    position: relative;
-}
-
-.navbar nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem; /* Reduced padding */
-    display: block;
-    transition: background-color 0.3s, color 0.3s; /* Added transition */
-}
-
-.navbar nav ul li a:hover {
-    background-color: #ff6600;
-    color: #000;
-}
-
-.navbar nav ul li ul.dropdown {
-    display: none;
-    position: sticky;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 100%;
-    left: 0;
-}
-
-.navbar nav ul li:hover ul.dropdown {
-    display: block;
-}
-
-.navbar nav ul li ul.dropdown li {
-    width: 200px;
-}
-.bg-black{
-  position: sticky;
-  top: 0%;
-  z-index: 1000;
-}
-.bg-black {
-  height: 70px;
-  border-radius: 2px solid rgb(181, 181, 181);
-}
-
-li{
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 150;
-}
 
 </style>
 </head>
@@ -96,12 +19,12 @@ li{
 <body>
   
 
-  <nav class="bg-gray-1000 py-4 px-6 shadow-md">
+  <nav class="bg-gray-1000 py-4 px-6 shadow-md" style="background-color: black;">
   <div class="container mx-auto flex items-center justify-between">
     <a href="#" class="flex items-center">
       <img src="MOLogo.png" alt="Mangos Orange Logo" class="h-12 mr-10">
     </a>
-    <ul class="hidden md:flex space-x-6">
+    <ul class="hidden md:flex space-x-6" style="color: aliceblue;">
       <li class="hover:text-E68369"><a href="home.html">Home</a></li>     
       <li class="hover:text-E68369"><a href="wista.html">Wista</a></li>
       <li class="hover:text-E68369"><a href="about.html">About</a></li>
