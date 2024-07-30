@@ -10,7 +10,40 @@
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
-   
+
+  nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 100%;
+    left: 0;
+  }
+  nav ul li:hover ul.dropdown {
+      display: block;
+  }
+  nav ul li ul.dropdown li {
+      width: 200px;
+  }
+  nav ul li a:hover {
+    background-color: #ff6600;
+    color: #000;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    position: relative;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Reduced padding */
+    display: block;
+    transition: background-color 0.3s, color 0.3s; /* Added transition */
+}
 
 
 </style>
@@ -21,17 +54,22 @@
 
   <nav class="bg-gray-1000 py-4 px-6 shadow-md" style="background-color: black;">
   <div class="container mx-auto flex items-center justify-between">
-    <a href="#" class="flex items-center">
+    <a href="home.html" class="flex items-center">
       <img src="MOLogo.png" alt="Mangos Orange Logo" class="h-12 mr-10">
     </a>
-    <ul class="hidden md:flex space-x-6" style="color: aliceblue;">
-      <li class="hover:text-E68369"><a href="home.html">Home</a></li>     
-      <li class="hover:text-E68369"><a href="wista.html">Wista</a></li>
-      <li class="hover:text-E68369"><a href="about.html">About</a></li>
-      <li class="hover:text-E68369"><a href="our_services.html">Our Services</a></li>
-      <li class="hover:text-E68369"><a href="gallery.html">Gallery</a></li>
-      <li class="hover:text-E68369"><a href="career.html">Career</a></li>
-      <li class="hover:text-E68369"><a href="contact.html">Contact Us</a></li>
+    <ul>
+      <li ><a href="home.html">Home</a></li>     
+      <li><a href="wista.html">Wista</a></li>
+      <li><a href="about.html">About</a>
+        <ul class="dropdown">
+          <li><a href="groupcompanies.html">Group Companies</a></li>
+          <li><a href="centreofexc.html">Centre of Excellence</a></li>
+      </ul>
+      </li>
+      <li ><a href="our_services.html">Our Services</a></li>
+      <li ><a href="gallery.html">Gallery</a></li>
+      <li ><a href="career.html">Career</a></li>
+      <li ><a href="contact.html">Contact Us</a></li>
     </ul>
     <button class="md:hidden focus:outline-none">
       <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

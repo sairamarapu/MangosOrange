@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre of Excellence | Mangoes Orange</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+</head>
+<style>
+    h2{
+        color: orange;
+    }
+    h1{
+        color: orange;
+    }
+    .hi{
+    
+    padding: 20px;
+}
+</style>
+<body class="bg-gray-900 text-gray-800">
+
+    <div id="navbar"></div>
+
+    <main class="container mx-auto px-4 py-12" style="padding: 2rem;">
+        <section class="bg-gray-800 rounded-lg shadow-lg" style="padding: 2rem;color: aliceblue;">
+            <h1 class="text-3xl font-bold text-orange-500 mb-4">Centre of Excellence (CoE)</h1>
+            <p class="mb-6">To promote and enhance skill development and employment generation activities for youth, MSPL is working under various schemes to impart skills in various trades & locations. MSPL provides the youth with industry relevant skills & On the Job Training required for making them employable.</p>
+            <p class="mb-6">Skill Development is a powerful tool to empower the people and improves their social acceptance. It is complemented by a good economic growth and enhances employability. India is towards the verge of being a developed country with needs a greater number of skilled and knowledgeable people.</p>
+
+            <div class="mt-8" style="color: aliceblue;">
+                <h2 class="text-3xl font-bold text-orange-500 mb-4">Flexible, modular framework to enable youth to obtain industry relevant qualifications</h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li class="flex items-start"><span class="text-orange-500">✓</span><span class="ml-2">To provide the students with a flexible, modular system for pursuing their higher education from 10th Pass to ITI/Diploma/Degree Level while they work.</span></li>
+                    <li class="flex items-start"><span class="text-orange-500">✓</span><span class="ml-2">To recognize prior learning & on the job learning and translated into credits which can be accumulated and will form a part of the earned qualification</span></li>
+                </ul>
+            </div>
+
+            
+            <div class="a" style="padding:1rem;">
+                
+                <div class="c" style="margin: 1rem;">
+                    <h1 class="heading" style="color: burlywood; font-size: 2rem;">Center of Excellence (COE) @ BTKIT Campus</h1>
+                <div class="d" style="padding: 2rem;"><p class="text" >Bipin Tripathi Kumaon Institute of Technology (BTKIT), located at Dwarahat, Near Ranikhet, Dist. Almora, Uttarakhand is one of the finest institutions of Uttarakhand, maintaining an excellent academic record.</p>
+                    <div>
+                        <p style="margin: 1rem; padding: 1rem;"> In the larger interest of the society and the nation, BTKIT has been taking initiative to encourage Entrepreneurship and self – employment and for this purpose the BTKIT has set up an Incubation, primarily to provide facilities and knowledge in technology-intensive areas.
+                            The incubation Center will be a research platform for students, industry, alumni, start-ups, small and medium enterprises, faculty and researchers by helping them commercialize technology innovations.</p>
+                        <p style="margin: 1rem;">
+                                MangosOrange works with BTKIT's Training and Placement cell to provide technical and professional exposure, enhance student skills and bring better job opportunities to the institute.
+                            </p>
+                    </div>
+                    
+                        
+                    
+                </div>
+                     </div>
+                <img src="images/MOU-04.jpeg" alt="Company Image" class="b" style="margin: 2rem;border-radius: 20px;">
+            </div>
+        </section>
+        
+    </main>
+    <div id="footer"></div>
+    <script>
+        function loadHTML(file, targetId) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(targetId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+        loadHTML("navbar.html", 'navbar');
+        loadHTML('footer.html', 'footer');
+    </script>
+
+</body>
+</html>
