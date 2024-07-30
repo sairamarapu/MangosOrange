@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MangosOrange</title>
     <link rel="stylesheet" href="first1.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+        .image-section img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        h1, h2, h3 {
+            color: #FFA500; /* Orange color */
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -111,46 +125,23 @@
             <!-- Add more client logos as needed -->
         </div>
     </section>
-    <footer>
-        <div class="footer-content">
-            <div class="useful-links">
-                <h3>Useful Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="our-services">
-                <h3>Our Services</h3>
-                <ul>
-                    <li><a href="#">Staffing Solutions</a></li>
-                    <li><a href="#">Skill Development Projects</a></li>
-                    <li><a href="#">Payroll Outsourcing</a></li>
-                    <!-- Add more service links as needed -->
-                </ul>
-            </div>
-            <div class="contact-us">
-                <h3>Contact Us</h3>
-                <address>
-                    Corp. Office:<br>
-                    H-87, 3rd Floor, Sector-63, Noida U.P. - 201301<br>
-                    Phone: <a href="tel:+911204164821">+91 120416 4821</a>
-                </address>
-            </div>
-            <div class="our-presence">
-                <h3>Our Presence</h3>
-                <ul>
-                    <li>Delhi</li>
-                    <li>Haryana</li>
-                    <li>Punjab</li>
-                    <!-- Add more locations as needed -->
-                </ul>
-            </div>
-        </div>
-    </footer>
-    
+    <div id="footer"></div>
+    <script>
+        function loadHTML(file, targetId) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(targetId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+        loadHTML("navbar.html", 'navbar');
+        loadHTML('footer.html', 'footer');
+    </script>
 </body>
 </html>
