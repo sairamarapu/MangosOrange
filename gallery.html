@@ -11,7 +11,10 @@
     @tailwind base;
   @tailwind components;
   @tailwind utilities;
-
+    
+    div.slides >img{
+        border-radius: 10px;
+    } 
 
 </style>
 </head>
@@ -22,13 +25,56 @@
           <div class="max-w-7xl mx-auto p-6">
               <div class="bg-gray-800 p-6 rounded-lg">
         <div class="flex flex-col items-center justify-center">
-          <h1 class="text-4xl text-orange-500 font-bold mb-4">Contact Us</h1>
+          <h1 class="text-4xl text-orange-500 font-bold mb-4">Gallery</h1>
+          <p style="width: 90%;margin-bottom:35px">
+            Offer Letter distribution by Honourable Chief Minister of Uttarakhand <b style="font-size: large;"> Pushkar Singh Dhami Ji </b>at Bageshwar District.
+            MangosOrange Services Pvt. Ltd. Recruited 70 candidates from that district and helped in employment generation for state of Uttarakhand.
+        </p>
+        <div class="slider">
+            <div class="slides">
+                <img src="images/g1.jpg" alt="Offer Letter distribution by Chief Minister of Uttarakhand 1">
+            </div>
+            <div class="slides">
+                <img src="images/g2.jpg" alt="Offer Letter distribution by Chief Minister of Uttarakhand 2">
+            </div>
+            <div class="slides">
+                <img src="images/g3.jpg" alt="Offer Letter distribution by Chief Minister of Uttarakhand 3">
+            </div>
+            <div class="slides">
+                <img src="images/g4.jpg" alt="Offer Letter distribution by Chief Minister of Uttarakhand 3">
+            </div>
+            <div class="slides">
+                <img src="images/g5.jpg" alt="Offer Letter distribution by Chief Minister of Uttarakhand 3">
+            </div>
+    
+            
+        </div>
+    
         </div>
         </div>
         </div>
         <div id="footer"></div>
 
     <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+
+        function plusSlides(n) {
+            slideIndex += n-1;
+            showSlides();
+        }
         function loadHTML(file, targetId) {
             fetch(file)
                 .then(response => {
