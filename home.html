@@ -24,9 +24,29 @@
                 </ul>
             </nav>
         </div>
-        <div class="hero"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <h1 style="color: rgb(228, 34, 34);">Welcome to MangosOrange</h1>
-            <a href="#" class="btn">Read More</a>
+        <div class="hero"><br/><br/><br/><br/><br/><br/><br/><br/>
+            <style>
+                @keyframes glowing {
+                    from {
+                        text-shadow: 0 0 10px rgb(246, 228, 114), 0 0 20px white, 0 0 30px orange;
+                    }
+                    to {
+                        text-shadow: 0 0 20px black, 0 0 30px rgb(0, 0, 0), 0 0 40px orange;
+                    }
+                }
+            
+                .glow-animated {
+                    font-size: 24px;
+                    color: #ff6600;
+                    animation: glowing 1s ease-in-out infinite alternate;
+                }
+            </style>
+            
+            <h1 class="glow-animated">Welcome To MangosOrange</h1>
+            
+            <!-- <h1 style="color: rgb(255, 0, 0); font-weight: bold;font-family: Cambria;fon">Welcome to MangosOrange</h1> -->
+            <br>
+            <a href="about.html" class="btn">Read More</a>
         </div>
     </header>
     <section class="about">

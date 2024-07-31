@@ -17,7 +17,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(0, 0, 0);
 }
 
 .navbar .logo {
@@ -50,8 +50,8 @@ header {
 }
 
 .navbar nav ul li a:hover {
-    background-color: #ff6600;
-    color: #000;
+    /* background-color: #ff6600; */
+    color: orange;
 }
 
 .navbar nav ul li ul.dropdown {
@@ -137,6 +137,7 @@ header {
     flex-wrap: wrap;
     padding: 3rem 2rem; /* Reduced padding */
     background-color: #1F2937;
+    color: orange;
 }
 
 .services .service-box {
@@ -150,13 +151,14 @@ header {
 }
 
 .services .service-box h3 {
-    color: #ff6600;
+    color: #ffffff;
 }
 
 .services .service-box:hover {
     background-color: #ff6600; /* Changed hover background color */
-    color: #000;
+    color: #ffffff;
     transform: scale(1.05); /* Added scale effect */
+    
 }
 
 .presence {
