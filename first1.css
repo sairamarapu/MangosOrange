@@ -154,16 +154,18 @@ header {
 }
 
 .services .service-box:hover {
-    background-color: #333;
+    background-color: #ff6600; /* Changed hover background color */
+    color: #000;
     transform: scale(1.05); /* Added scale effect */
 }
 
 .presence {
-    padding: 3rem 2rem;
-    display: flex; /* Reduced padding */
+    padding: 3rem 2rem; /* Reduced padding */
+    display: flex;
     text-align: center;
-    background-color:#1F2937;
+    background-color: #1F2937;
 }
+
 .presence .presence-box {
     flex: 1 1 calc(33.333% - 2rem);
     margin: 1rem;
@@ -179,20 +181,16 @@ header {
 }
 
 .presence .presence-box:hover {
-    background-color: #333;
+    background-color: #ff6600; /* Changed hover background color */
+    color: #000;
     transform: scale(1.05); /* Added scale effect */
 }
-
-
-
 
 .clients {
     padding: 3rem 2rem; /* Reduced padding */
     text-align: center;
     background-color: #1F2937;
 }
-
-
 
 .clients .client-logos {
     display: flex;
